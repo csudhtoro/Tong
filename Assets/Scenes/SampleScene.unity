@@ -232,7 +232,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 2, y: 3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117522311}
   m_LocalRotation: {x: -0.21870205, y: -0.44704348, z: -0.32708153, w: -0.80333}
-  m_LocalPosition: {x: 7.85, y: 0.34, z: 2.96}
+  m_LocalPosition: {x: 7.85, y: 0, z: 0}
   m_LocalScale: {x: 0.2702211, y: 0.2752286, z: 1.0211}
   m_Children: []
   m_Father: {fileID: 0}
@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db968092f48bc0840a71911b941c3c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 117522313}
+  rb2d2: {fileID: 0}
   yBound: 3
   speed: 10
   axis: Vertical2
@@ -494,7 +496,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -865,7 +867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573313322}
   m_LocalRotation: {x: 0.17165178, y: 0.46713394, z: -0.35404605, w: -0.7918162}
-  m_LocalPosition: {x: -7.85, y: 0.34, z: 2.96}
+  m_LocalPosition: {x: -7.85, y: 0, z: 0}
   m_LocalScale: {x: 0.2702211, y: 0.2752286, z: 1.0211}
   m_Children: []
   m_Father: {fileID: 0}
@@ -890,7 +892,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &573313326
 BoxCollider2D:
@@ -930,6 +932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db968092f48bc0840a71911b941c3c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 573313325}
+  rb2d2: {fileID: 0}
   yBound: 3
   speed: 10
   axis: Vertical

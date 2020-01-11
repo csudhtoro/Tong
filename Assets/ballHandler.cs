@@ -8,13 +8,16 @@ public class ballHandler : MonoBehaviour
     private Rigidbody2D rb2d;
     public float multiplier = .0f;
     public AudioSource hitSource;
+    GameObject[] theRacket;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        Invoke("GoBall", 2);
         hitSource = GetComponent<AudioSource>();
+        theRacket = GameObject.FindGameObjectsWithTag("Racket");
+        Invoke("GoBall", 2);
+        
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class ballHandler : MonoBehaviour
         }
     }
 
+    
     void ResetBall()
     {
         rb2d.velocity = Vector2.zero;
@@ -40,6 +44,9 @@ public class ballHandler : MonoBehaviour
 
     void RestartGame()
     {
+        foreach (GameObject racket in theRacket) {
+            racket.SendMessage("ResetRacket", 0.5f, SendMessageOptions.RequireReceiver);
+        }
         ResetBall();
         Invoke("GoBall", 1);
     }
