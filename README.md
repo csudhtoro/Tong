@@ -1,2 +1,2 @@
 # Tong
-Simple Tennis Pong game in Unity
+Simple 2 player Tennis game (Pong)
