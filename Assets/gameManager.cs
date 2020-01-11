@@ -18,16 +18,17 @@ public class gameManager : MonoBehaviour
         theBall = GameObject.FindGameObjectWithTag("Ball");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public static void Score(string wallID)
     {
-        if (wallID == "rightWall") PlayerScore1++;
-        else PlayerScore2++;
+        if (wallID == "rightWall")
+        {
+            PlayerScore1++;
+        }
+        else
+        {
+            PlayerScore2++;
+        }
     }
 
     private void OnGUI()

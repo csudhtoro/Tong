@@ -7,19 +7,17 @@ public class ballHandler : MonoBehaviour
 
     private Rigidbody2D rb2d;
     public float multiplier = .0f;
+    public AudioSource hitSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         Invoke("GoBall", 2);
+        hitSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-       
-    }
 
     void GoBall()
     {
@@ -47,6 +45,8 @@ public class ballHandler : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
+        if(coll.collider.CompareTag("Racket")) hitSource.Play();
+
         if (coll.collider.CompareTag("Player"))
         {
             Vector2 vel;
